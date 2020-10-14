@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>codesandbox</title>
+  </head>
+  <body>
+    <ul id="example-1">
+      <li v-for="item in items" :key="item.message">
+        {{ item.message }}
+      </li>
+    </ul>
+
+    <!-- <ul id="example-2">
+      <li v-for="(item, index) in items">
+        {{ parentMessage }} - {{ index }} - {{ item.message }}
+      </li>
+    </ul> -->
+  </body>
+
+  <script>
+    var example1 = new Vue({
+      el: "#example-1",
+      data: {
+        items: [{ message: "Foo" }, { message: "Bar" }]
+      }
+    });
+
+    // var example2 = new Vue({
+    //   el: "#example-2",
+    //   data: {
+    //     parentMessage: "Parent",
+    //     items: [{ message: "Foo" }, { message: "Bar" }]
+    //   }
+    // });
+
+    /*--Mutation Methods*/
+    // example1.items.push({ message: "Baz" });
+    // example1.items.push({ message: "Hee" });
+    // example1.items.shift()({ message: "Baz" });
+
+    /*--Replacing an Array*/
+    // example1.items = example1.items.filter(function (item) {
+    //   return item.message.match(/Foo/);
+    // });
+  </script>
+</html>
